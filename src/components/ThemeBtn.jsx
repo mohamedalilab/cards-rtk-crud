@@ -3,7 +3,7 @@ import { selectDarkMode, toggleTheme } from "../features/themeSlice";
 
 function ThemeBtn() {
   const dispatch = useDispatch();
-  const darkMode = useSelector(selectDarkMode);
+  const isDark = useSelector(selectDarkMode) === "dark";
 
   return (
     <button
@@ -11,7 +11,7 @@ function ThemeBtn() {
       className="p-2 rounded-lg bg-(--color-bg-subtle) text-(--color-text-main) hover:bg-(--color-bg-subtle-hover) transition-colors cursor-pointer"
       aria-label="Toggle Dark Mode"
     >
-      {darkMode ? "☀️ Light" : "🌙 Dark"}
+      {isDark ? "🌙 Dark" : "☀️ Light"}
     </button>
   );
 }

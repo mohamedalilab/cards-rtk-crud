@@ -12,8 +12,8 @@ dist
 dist-ssr
 *.local
 
-later
-FilterColors
+later.md
+FilterColors.jsx
 
 # Editor directories and files
 .vscode/*
